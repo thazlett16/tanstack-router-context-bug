@@ -9,7 +9,7 @@ export const Route = createRootRoute({
         }
 
         console.info("testString - beforeLoad", testString);
-        console.info("testFunction - beforeLoad", testFunction);
+        // console.info("testFunction - beforeLoad", testFunction);
 
         return {
             testString,
@@ -18,14 +18,14 @@ export const Route = createRootRoute({
     },
     loader: ({context: {testString, testFunction}}) => {
         console.info("testString - loader", testString);
-        console.info("testFunction - loader", testFunction);
+        // console.info("testFunction - loader", testFunction);
     },
     component: () => (
         <>
             <Link to="/">Home</Link>
-            <hr />
+            <hr/>
             <Link to="/about">About</Link>
-            <hr />
+            <hr/>
             <Outlet/>
             <TanStackRouterDevtools/>
         </>
