@@ -8,8 +8,8 @@ export const Route = createRootRoute({
             console.info("Test Function")
         }
 
-        console.info("testString - beforeLoad", testString);
-        // console.info("testFunction - beforeLoad", testFunction);
+        console.info("__root - beforeLoad - testString", testString);
+        // console.info("__root - beforeLoad - testFunction", testFunction);
 
         return {
             testString,
@@ -17,8 +17,8 @@ export const Route = createRootRoute({
         }
     },
     loader: ({context: {testString, testFunction}}) => {
-        console.info("testString - loader", testString);
-        // console.info("testFunction - loader", testFunction);
+        console.info("__root - loader - testString", testString);
+        // console.info("__root - loader - testFunction", testFunction);
     },
     component: () => (
         <>

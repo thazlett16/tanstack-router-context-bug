@@ -10,16 +10,16 @@ export const Route = createFileRoute('/about')({
         offset: v.optional(v.fallback(v.number(), OFFSET_DEFAULT), OFFSET_DEFAULT),
     }),
     beforeLoad: ({context: {testString, testFunction}}) => {
-        console.info("testString - beforeLoad - aboutRoute -", testString);
-        // console.info("testFunction - beforeLoad - aboutRoute -", testFunction);
+        console.info("/about - beforeLoad - testString", testString);
+        // console.info("/about - beforeLoad - testFunction", testFunction);
     },
     loaderDeps: ({search: {limit, offset}}) => ({limit, offset}),
     loader: ({deps: {limit, offset}, context: {testString, testFunction}}) => {
         // console.info("deps: limit - ", limit);
         // console.info("deps: offset - ", offset);
 
-        console.info("testString - loader - aboutRoute -", testString);
-        // console.info("testFunction - loader - aboutRoute -", testFunction);
+        console.info("/about - loader - testString", testString);
+        // console.info("/about - loader - testFunction", testFunction);
     },
     component: RouteComponent,
 })
